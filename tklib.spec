@@ -29,11 +29,11 @@ on the web, or read-only accessible via CVS ), and more.
 %prep
 %setup -q
 sed -i 's/2.0.1/2.1.0/g' modules/plotchart/plotchart.tcl
-sed -i 's/\/bin\/env/\/bin\/sh/g' examples/canvas/demo_editpoints.tcl
-sed -i 's/\/bin\/env/\/bin\/sh/g' examples/canvas/demo_editquadconvex.tcl
-sed -i 's/\/bin\/env/\/bin\/sh/g' examples/canvas/demo_editquad.tcl
-sed -i 's/\/bin\/env/\/bin\/sh/g' examples/canvas/demo_editpoly.tcl
-sed -i 's/\/bin\/env/\/bin\/sh/g' examples/canvas/demo_draghigh.tcl
+sed -i 's/\/bin\/env/\/usr\/bin\/env/g' examples/canvas/demo_editpoints.tcl
+sed -i 's/\/bin\/env/\/usr\/bin\/env/g' examples/canvas/demo_editquadconvex.tcl
+sed -i 's/\/bin\/env/\/usr\/bin\/env/g' examples/canvas/demo_editquad.tcl
+sed -i 's/\/bin\/env/\/usr\/bin\/env/g' examples/canvas/demo_editpoly.tcl
+sed -i 's/\/bin\/env/\/usr\/bin\/env/g' examples/canvas/demo_draghigh.tcl
 
 %build
 
