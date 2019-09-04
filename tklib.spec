@@ -29,6 +29,9 @@ on the web, or read-only accessible via CVS ), and more.
 %prep
 %setup -q
 sed -i 's/2.0.1/2.1.0/g' modules/plotchart/plotchart.tcl
+sed -i 's/\/usr\/bin\/env tclsh/\/usr\/bin\/tclsh/g'    examples/canvas/city.tcl
+sed -i 's/\/usr\/bin\/env tclsh/\/usr\/bin\/tclsh/g'    examples/canvas/puzzle.tcl
+sed -i 's/\/usr\/bin\/env tclsh8.5/\/usr\/bin\/tclsh/g' examples/canvas/osm.tcl
 sed -i 's/\/bin\/env tclsh8.5/\/usr\/bin\/tclsh/g' examples/canvas/demo_editpoints.tcl
 sed -i 's/\/bin\/env tclsh8.5/\/usr\/bin\/tclsh/g' examples/canvas/demo_editquadconvex.tcl
 sed -i 's/\/bin\/env tclsh8.5/\/usr\/bin\/tclsh/g' examples/canvas/demo_editquad.tcl
@@ -38,7 +41,12 @@ sed -i 's/\/usr\/bin\/env tclsh/\/usr\/bin\/tclsh/'  examples/controlwidget/*.tc
 sed -i 's/\/usr\/bin\/env tclsh/\/usr\/bin\/tclsh/'  examples/plotchart/*.tcl
 sed -i 's/\/usr\/bin\/env wish/\/usr\/bin\/wish/'    examples/mentry/*.tcl
 sed -i 's/\/usr\/bin\/env wish/\/usr\/bin\/wish/'    examples/tablelist/*.tcl
+sed -i 's/\/usr\/bin\/env wish/\/usr\/bin\/wish/'    modules/tablelist/scripts/repair.tcl
 sed -i 's/\/usr\/bin\/env wish/\/usr\/bin\/wish/'    examples/wcb/*.tcl
+sed -i 's/\/usr\/bin\/env wish/\/usr\/bin\/wish/'    examples/scrollutil/*.tcl
+sed -i 's/\/usr\/bin\/env wish/\/usr\/bin\/wish/'    examples/tkpiechart/*.tcl
+
+chmod -x examples/plotchart/tcllogo.gif
 
 %build
 
