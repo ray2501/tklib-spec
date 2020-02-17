@@ -6,7 +6,7 @@ Name:           tklib
 Url:            http://core.tcl.tk/tklib/
 BuildRequires:  tcl >= 8.3.1
 BuildRequires:  sed
-Version:        0.6_git20200111
+Version:        0.7
 Release:        0
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Summary:        The standard Tk library
@@ -15,7 +15,7 @@ Group:          Development/Libraries/Tcl
 BuildArch:      noarch
 Requires:       /bin/sh
 Requires:       tcl >= 8.3.1
-Source0:        %name-%version.tar.gz
+Source0:        %name-%name-%version.tar.gz
 
 %description
 Tklib, the Tk Standard Library is a collection of Tcl packages
@@ -27,7 +27,7 @@ for bug reports and feature requests, the CVS repository (browsable
 on the web, or read-only accessible via CVS ), and more.
 
 %prep
-%setup -q
+%setup -q -n %{name}-%{name}-%{version}
 sed -i 's/2.0.1/2.1.0/g' modules/plotchart/plotchart.tcl
 sed -i 's/\/usr\/bin\/env tclsh/\/usr\/bin\/tclsh/g'    examples/canvas/city.tcl
 sed -i 's/\/usr\/bin\/env tclsh/\/usr\/bin\/tclsh/g'    examples/canvas/puzzle.tcl
