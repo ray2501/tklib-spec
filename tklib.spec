@@ -6,7 +6,7 @@ Name:           tklib
 Url:            http://core.tcl.tk/tklib/
 BuildRequires:  tcl >= 8.3.1
 BuildRequires:  sed
-Version:        0.7_git20240228
+Version:        0.7_git20240305
 Release:        0
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Summary:        The standard Tk library
