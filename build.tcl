@@ -1,14 +1,14 @@
 #!/usr/bin/tclsh
 
 set arch "noarch"
-set base "tklib-0.8_git20241202"
+set base "tklib-0.9"
 
 set var2 [list git clone https://github.com/tcltk/tklib.git $base]
 exec >@stdout 2>@stderr {*}$var2
 
 cd $base
 
-set var2 [list git checkout a3c1cd0942e77ea512165a512b46d648f1424980]
+set var2 [list git checkout 70328b2378ddd8c2af3eb2b4721e337bda01930b]
 exec >@stdout 2>@stderr {*}$var2
 
 set var2 [list git reset --hard]
