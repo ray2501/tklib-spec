@@ -3,7 +3,7 @@
 #
 
 Name:           tklib
-Url:            http://core.tcl.tk/tklib/
+Url:            https://core.tcl-lang.org/tklib
 BuildRequires:  tcl >= 8.6.1
 BuildRequires:  sed
 Version:        0.9_git20261004
